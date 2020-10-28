@@ -12,20 +12,13 @@ const eqObjects = function(object1, object2) {
 
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect; // IMPORTS UTIL LIBRARY WHICH ALLOWS TO FIX THE OUTPUT DUE TO INSPECT FUNCTION
-  if (Object.keys(actual).length !== Object.keys(expected).length) {
-    console.log(`😡😡😡 Assertion Failed: ${inspect(actual)} & ${inspect(expected)} do not have the same #of keys`);
+  if (!eqObjects(actual, expected)) {
+    console.log(`😡😡😡 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
     return false;
-  } else {
+  } else if (eqObjects(actual, expected)) {
+    console.log(`😃😃😃 Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
   }
-  for (let key in actual) {
-    if (actual[key] !== expected[key]) {
-      console.log(`😡😡😡 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
-      return false;
-    }
-  }
-  console.log(`😃😃😃 Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
 };
-
 const obtest1 = {a: 1, b: 2, c: 3};
 const obtest10 = {a: 1, b: 2, c: 3};
 const obtest2 = {a: 1, b: 2, c: 3, d:3};
