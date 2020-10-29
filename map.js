@@ -21,21 +21,21 @@ const eqArrays = function (array1, array2) {
 };
 
 
-const letterPositions = function(sentence) {
-  const results = {};
-  for (let i = 0; i < sentence.length; i++) {
-    const letter = sentence[i]
-    if (letter !== " ") {
-      if(!results[letter]) {
-        results[letter] = [i]
-      } else {
-        results[letter].push(i)
-      }
-    }
-  }
-  console.log(results)
-  return results;
-};
 
-letterPositions("lighthouse in the house");
-assertArraysEqual(letterPositions("hello").e, [1]);
+const words = ["ground", "control", "to", "major", "tom"];
+
+/////MAP function
+const map = ((array, callback) => {
+  const results = [];
+  for (let item of array) {
+    results.push(callback(item))
+    
+  }
+  return results
+});
+
+// Function to obtain the first letter of every word
+const results1 = map(words, word => word[0]);
+
+
+assertArraysEqual(results1, [ 'g', 'c', 't', 'm', 't' ]);
