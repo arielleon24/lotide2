@@ -1,7 +1,8 @@
 const { assert } = require("chai");
 const tail = require("../tail");
-const assertEqual = require("../assertEqual");
-const assertArraysEqual = require("../assertArraysEqual");
+//NOT NEEDED WITH MOCHA AND CHAI
+// const assertEqual = require("../assertEqual");
+// const assertArraysEqual = require("../assertArraysEqual");
 
 // // Test Case: Check the original array
 // const words = ["Yo Yo", "Lighthouse", "Labs"];

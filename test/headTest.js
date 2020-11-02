@@ -1,6 +1,6 @@
 const assert = require('chai').assert;
 const head = require("../head");
-const assertEqual = require("../assertEqual");
+// const assertEqual = require("../assertEqual"); NOT NEEDED with Mocha and Chai
 
 // -TEST CODE-
 

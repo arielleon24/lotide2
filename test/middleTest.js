@@ -1,7 +1,8 @@
 const { assert } = require("chai");
-const assertArraysEqual = require("../assertArraysEqual");
-const eqArrays = require("../eqArrays");
 const middle = require("../middle")
+//NOT NEEDED WITH MOCHA AND CHAI
+// const assertArraysEqual = require("../assertArraysEqual");
+// const eqArrays = require("../eqArrays");
 
 
 // //TEST CODE // 
